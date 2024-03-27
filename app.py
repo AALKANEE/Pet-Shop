@@ -41,4 +41,10 @@ class inventory:
         print('Saving!')
 
     def load(self):
-        pass
+        print('Loading inventory')
+        if not os.path.exists('inventory.txt'):
+            print('Skipping,nothing to load')
+            return
+        with open('inventory.txt', 'r') as f:
+            self.pets = json.load(f)
+        print('Loaded!')
