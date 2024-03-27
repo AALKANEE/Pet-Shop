@@ -8,7 +8,7 @@ class inventory:
     def __init__(self):
         self.load()
 
-#def: quantity(qty and q),key,value(v)
+#def: quantity(qty and q),key,value(v),file(f)
         
     def add(self,key,qty):
         q=0
@@ -35,6 +35,10 @@ class inventory:
             print(f'{key} = {value}')
 
     def save(self):
-        pass
+        print('saving inventory')
+        with open('inventory.txt', 'w') as f:
+            json.dump(self.pets,f)
+        print('Saving!')
+
     def load(self):
         pass
