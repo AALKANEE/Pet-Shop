@@ -7,6 +7,7 @@ Details:
 3. load
 4. list
 5. remove
+6. txt
 
 ---
 
